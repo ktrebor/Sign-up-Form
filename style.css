@@ -1,6 +1,10 @@
 :root {
     --black-background-color: rgb(0, 0, 0, 0.4);
+    --white-background-color: rgb(255, 255, 255);
     --white-text-color: rgb(255, 255, 255);
+    --green-color: #596D48;
+    --add-space: 20px;
+
 }
 * {
     margin: 0;
@@ -10,6 +14,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: var(--white-background-color);
 }
 
 @font-face {
@@ -19,8 +24,6 @@ body {
 
 .content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 100vh;
 }
 
@@ -71,4 +74,116 @@ body {
 
 .right {
     flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
+
+.right-top {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#third-paragraph {
+    margin-top: 30px;
+}
+
+.form {
+    background-color: var(--white-text-color);
+    box-shadow: 0px 0px 15px 0px var(--black-background-color);
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: var(--add-space);
+}
+
+.inputs {
+    margin-bottom: var(--add-space);
+}
+
+
+.form-title {
+    background-color: var(--white-text-color);
+    margin-bottom: 40px;
+}
+
+.create-account, 
+.acount-paragraph,
+.form,
+.right-top {
+    padding: 0 var(--add-space);
+}
+
+#existing-account {
+    font-size: 1.1rem;
+}
+
+#existing-account > a {
+    color: var(--green-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--green-color);
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.inputs > div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 100px;
+    margin-bottom: 20px;
+}
+  
+.inputs label {
+    display: block;
+    font-size: 1rem;
+}
+
+.focus {
+    border: 1px solid blue !important;
+}
+.error {
+    border: 1px solid red !important;
+}
+
+input[type='text'], 
+input[type='email'], 
+input[type='password'] {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  width: 250px;
+  padding: 7px;
+  font-size: 1rem;
+}
+
+input[type='email']:invalid, 
+input[type='password']:invalid {
+    border: 1px solid red;
+}
+
+.form-row > p {
+    color: red;
+    font-size: 0.8rem;
+}
+
+
+

@@ -22,21 +22,25 @@
         </div>
         <div class="right">
             <div class="right-top">
-                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
-                <p>Sign up <em>now</em> to get started.</p>
-                <p>You <em>know</em> you want to.</p>          
+                <p id="first-paragraph">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+                <p id="second-paragraph">Sign up <em>now</em> to get started.</p>
+                <p id="third-paragraph">You <em>know</em> you want to.</p>          
             </div>
             <div class="form">
-                <h2>Let's do this!</h2>
+                <h2 class="form-title">Let's do this!</h2>
                 <form action="#" method="post">
+                    <div class="inputs">
+                    <div class="two-inputs">
                     <div class='form-row'>
                         <label for='first-name'>First Name</label>
-                        <input id='first-name' name='first-name' type='text'/>
+                        <input id='first-name' name='first-name' type='text' placeholder="Thor"/>
                     </div>
                     <div class='form-row'>
                         <label for='last-name'>Last Name</label>
-                        <input id='last-name' name='last-name' type='text'/>
+                        <input id='last-name' name='last-name' type='text' class="focus" placeholder="Odison"/>
                     </div>
+                    </div>
+                    <div class="two-inputs">
                     <div class='form-row'>
                         <label for='email'>Email</label>
                         <input id='email' name='email' type='email'/>
@@ -45,19 +49,26 @@
                         <label for='phone'>Phone Number</label>
                         <input id='phone' name='phone' type='text'/>
                     </div>
+                    </div>
+                    <div class="two-inputs">
                     <div class='form-row'>
                         <label for='password'>Password</label>
-                        <input id='password' name='password' type='password'/>
+                        <input id='password' name='password' type='password' class="error"/>
+                        <p>*Passwords do not match</p>
                     </div>
                     <div class='form-row'>
                         <label for='confirm-password'>Confirm password</label>
-                        <input id='confirm-password' name='confirm-password' type='password'/>
+                        <input id='confirm-password' name='confirm-password' type='password' class="error"/>
                     </div>
-                    <div class="create-account">
-                        <button type="submit">Create account</button>
-                    </div>
+                </div>
+                </div>
                 </form>
-                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+            <div class="create-account">
+                <button type="submit">Create account</button>
+            </div>
+            <div class="acount-paragraph">
+                <p id="existing-account">Already have an account? <a href="#">Log in</a></p>
             </div>
         </div>
     </div>
